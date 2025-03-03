@@ -1,7 +1,3 @@
-Alright, you’ve moved the code into the `ui` directory, and I’ve got you covered with an updated README that reflects this change along with the latest features and structure. Below is the shiny new complete README, packed with all the updates, a dash of humor, and everything you need to get rocking with HarmonicVAE. Let’s dive in!
-
----
-
 # HarmonicVAE
 
 Welcome to **HarmonicVAE**—a neural network that’s basically a musical genius trapped in code. This bad boy doesn’t just crunch audio; it *gets* music, weaving psychoacoustics and music theory into its DNA. It’s like handing a VAE a conservatory degree and a backstage pass to real-world datasets like MAESTRO and GTZAN. Let’s make some noise—literally!
