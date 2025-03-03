@@ -1,0 +1,43 @@
+{
+  "name": "harmonic-vae-feedback",
+  "version": "1.0.0",
+  "description": "A feedback system for HarmonicVAE, enabling user-driven improvements in AI-generated music through emotion tagging and quality ratings.",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "dev": "nodemon src/server/server.js",
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "sqlite3": "^5.1.6",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  },
+  "author": "Your Name or Organization",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/harmonic-vae-feedback.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "HarmonicVAE",
+    "AI music",
+    "feedback system",
+    "emotion tagging",
+    "music generation"
+  ],
+  "private": true
+}
