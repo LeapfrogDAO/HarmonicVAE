@@ -1,143 +1,124 @@
-# HarmonicVAE
+# HarmonicVAE Feedback System
 
-Welcome to **HarmonicVAE**—a neural network that’s basically a musical genius trapped in code. This bad boy doesn’t just crunch audio; it *gets* music, weaving psychoacoustics and music theory into its DNA. It’s like handing a VAE a conservatory degree and a backstage pass to real-world datasets like MAESTRO and GTZAN. Let’s make some noise—literally!
+🎵 **Think you can out-emote an AI?** Step right up to the HarmonicVAE Feedback System—where *you* get to tell our musical robot overlord if its beats make you boogie, bawl, or just yawn. This isn’t just feedback; it’s a vibe check for AI-generated tunes, complete with pulsing visuals that groove harder than your uncle at a wedding reception. 🎶
+
+HarmonicVAE is an AI composer with big dreams (and maybe a few sour notes), and it needs *your* human soul to help it evolve. Rate its jams, spin the emotion wheel, and drop some truth bombs—it’s like music therapy, but for a machine. Let’s make AI music that doesn’t just play in elevators!
+
+---
+
+## Project Overview
+
+The HarmonicVAE Feedback System is your backstage pass to shaping the future of AI music. It’s a slick setup that captures how HarmonicVAE’s tunes hit your heartstrings, with tools like:
+
+- An **Emotion Wheel** that spins faster than a DJ at 2 a.m.
+- A **Star Rating System** to crown the AI a rockstar—or send it back to rehearsal.
+- **Rotating Comment Prompts** that ask the deep stuff, like “Did this bassline slap harder than Monday mornings?”
+- **Audio-Reactive Visuals** that dance to the beat, because feedback should have *rhythm*.
+
+Your input doesn’t just vanish into the void—it teaches HarmonicVAE to drop bangers instead of duds. Think of it as crowd-sourcing the next big hit, one emotion at a time.
+
+---
 
 ## Features
 
-- **Psychoacoustic Modeling**: Mel spectrograms and harmonic vibes straight out of music theory, because your ears deserve better than flat frequencies.
-- **Variational Architecture**: A latent space so smooth you could slide between musical ideas like a DJ on a sugar high.
-- **Hierarchical Representations**: Catches everything from subtle timbres to epic musical arcs—like a composer with X-ray hearing.
-- **LLM Bridge**: Optional hookup to Large Language Models, so you can whisper "make me a banger" and watch it deliver.
-- **Real Audio Integration**: Trains on MAESTRO (piano perfection) and GTZAN (genre galore), plus your own audio stash. No more fake beats here!
+- **Emotion Wheel**: Spin it like a game show wheel and land on how you feel—dancing with joy or brooding in a corner?
+- **Star Rating System**: From “One-star snooze” to “Five-star encore!”—give the AI the applause (or boos) it deserves.
+- **Rotating Comment Prompts**: Face questions like “Would this track get you through a breakup?” or “Does it vibe like a coffee shop playlist?”
+- **Audio Reactivity**: Watch the visuals pulse like they’re auditioning for a light show—synced to the music’s soul.
+- **Feedback Collection**: Your thoughts get scooped up and analyzed to make HarmonicVAE less “beep-boop” and more “boom-boom.”
+- **Insights Dashboard**: Peek at how others felt—did everyone cry, or are you just extra sappy? (Coming soon!)
 
-## Project Structure
-
-Since you’ve tucked the good stuff into the `ui` directory, here’s the updated lay of the land:
-
-```
-harmonic-vae/
-├── src/               # Source code directory
-│   ├── __init__.py    # Package marker file
-│   ├── HarmonicVAE.py # Core model implementation
-│   └── harmonic_audio_integration.py # Audio data handling and CLI
-├── ui/                # User interface subdirectory (the new VIP section!)
-│   ├── HarmonicVAEInterface.py # Gradio interface for HarmonicVAE
-├── README.md          # You are here!
-└── requirements.txt   # Dependencies
-```
-
-## Requirements
-
-- **Python 3.7+**: We’re not stuck in the Dark Ages.
-- **PyTorch 1.7+**: The engine under the hood.
-- **torchaudio**: Audio magic, unleashed.
-- **numpy**: For when the numbers need wrangling.
-- **matplotlib**: Pretty graphs to impress your friends.
-- **scikit-learn**: Data splitting like a ninja.
-- **(Optional) transformers**: For that sweet text-to-tune action.
-- **(Optional) plotly**: Fancy interactive visuals that scream "look at me!"
+---
 
 ## Installation
 
+Ready to rock this setup? Here’s how to get the band on stage:
+
+1. **Clone the Repo**: Snag the code like it’s the last guitar pick at the merch table.
+   ```bash
+   git clone https://github.com/yourusername/harmonic-vae-feedback.git
+   cd harmonic-vae-feedback
+   ```
+
+2. **Install Dependencies**: Feed the system its musical nutrients.
+   ```bash
+   npm install
+   ```
+
+3. **Start the Server**: Hit play and let the good times roll.
+   ```bash
+   npm start
+   ```
+
+4. **Jam in Your Browser**: Swing by `http://localhost:3000` and crank up the volume.
+
+*Pro Tip*: If something glitches, yell “One more time!” and try again—it works for DJs.
+
+---
+
+## Project Structure
+
+Here’s the setlist for where everything lives:
+
+```
+harmonic-vae-feedback/
+├── public/                   # The front-row seats
+│   ├── index.html            # The main stage
+│   ├── styles.css            # The flashy outfits
+│   ├── emotion-wheel.js      # The emotional roadie
+│   ├── star-rating.js        # The applause meter
+│   ├── audio-processor.js    # The soundwave wizard
+│   ├── app.js                # The band leader
+│   └── demo-audio/           # The warm-up tracks
+├── server.js                 # The backstage crew
+├── package.json              # The VIP list
+└── README.md                 # The concert program (you’re reading it!)
+```
+
+---
+
+## Usage
+
+Time to take the mic and give HarmonicVAE some notes (pun intended):
+
+1. **Generate a Track**: Hit "Generate New Track" and let the AI strum something fresh. It’s trying so hard to impress you!
+2. **Listen Up**: Let the soundwaves hit you—sway, sob, or stare in confusion, it’s all fair game.
+3. **Spin the Wheel**: Tell the AI if its tune made you feel like a pop star or a grumpy cat.
+4. **Drop Some Stars**: Rate it 1 to 5—be brutal, be kind, just don’t be silent.
+5. **Spill the Tea**: Answer a quirky prompt like “Did this melody make you text your ex?” (Optional, but encouraged.)
+6. **Submit Your Set**: Click "Submit Feedback" and watch your wisdom shape the AI’s next gig.
+7. **Encore or Insights**: Generate another track for Round 2, or check the **Insights Dashboard** to see if everyone else vibed the same way.
+
+---
+
+## Development
+
+Want to remix this system? Keep the tunes flowing while you tweak:
+
 ```bash
-# Snag the repo like it’s hot
-git clone https://github.com/yourusername/harmonic-vae.git
-cd harmonic-vae
-
-# Load up the goods
-pip install -r requirements.txt
+npm run dev
 ```
 
-## Quick Start
+This fires up `nodemon`, so the server restarts faster than a drummer after a coffee break. Code away!
 
-### Training on GTZAN Dataset
+---
 
-```bash
-python -m src.harmonic_audio_integration --dataset gtzan --mode train --epochs 50 --output_dir output/gtzan
-```
-*Unleash the model on GTZAN and watch it vibe from blues to metal like a genre-hopping rockstar.*
+## Insights Dashboard
 
-### Training on MAESTRO Dataset
+Curious if your tears were a solo act? The **Insights Dashboard** (coming soon) spills the stats on how everyone felt—think of it as the encore where the crowd’s emotions take center stage.
 
-```bash
-python -m src.harmonic_audio_integration --dataset maestro --mode train --epochs 50 --output_dir output/maestro
-```
-*Let it soak up MAESTRO’s piano brilliance—Chopin would approve (maybe).*
-
-### Training on Custom Audio Files
-
-```bash
-python -m src.harmonic_audio_integration --dataset custom --custom_dir path/to/audio/files --mode train --epochs 50 --output_dir output/custom
-```
-*Got a secret audio hoard? Dump it in and see what this beast cooks up. No judgment, even if it’s all polka.*
-
-### Generating New Audio from a Trained Model
-
-```bash
-python -m src.harmonic_audio_integration --mode generate --model_path output/gtzan/harmonic_vae_best.pt --output_dir output/generated
-```
-*Crank out fresh tunes. Will it be a hit or a hilarious flop? Spin the wheel!*
-
-### Visualizing the Latent Space of Your Audio Files
-
-```bash
-python -m src.harmonic_audio_integration --mode visualize --model_path output/gtzan/harmonic_vae_best.pt --custom_dir path/to/audio/files --output_dir output/visualizations
-```
-*Peek into the latent space—it’s like a cosmic map of your music collection. Zoom in, get lost, have fun.*
-
-### Interpolating Between Two Audio Files
-
-```bash
-python -m src.harmonic_audio_integration --mode interpolate --model_path output/gtzan/harmonic_vae_best.pt --audio1 path/to/audio1.wav --audio2 path/to/audio2.wav --output_dir output/interpolations
-```
-*Mix two tracks like a sonic smoothie blender. Jazz meets dubstep? Let’s find out!*
-
-## Architecture Details
-
-This Harmonic VAE is a musical marvel built from the ground up:
-
-1. **Audio Processing**: Turns raw audio into mel spectrograms—because humans hear fancy, not flat.
-2. **Encoder Network**: Squashes audio into a latent nugget of pure musical essence.
-3. **Harmonic Layers**: Special sauce layers that know a chord from chaos, thanks to music theory.
-4. **Latent Space**: A playground where musical ideas hang out, ready to mingle.
-5. **Decoder Network**: Spins latent dreams back into sound waves you can actually hear.
-6. **LLM Bridge**: Optional gadget to chat with language models—because "sad violin" should mean something.
-
-## Example Results
-
-Once trained, this model can:
-
-- **Generate novel jams**: New music from scratch—maybe a masterpiece, maybe a meme.
-- **Interpolate like a pro**: Blend genres or pieces smoother than a jazz sax solo.
-- **Visualize the magic**: Plot your audio in 2D and see the family resemblance between tracks.
-- **Text-to-tune**: With the LLM bridge, turn "epic battle theme" into an actual epic battle theme.
-
-## Extending the Model
-
-This isn’t a one-trick pony—tweak it to your heart’s content:
-
-- **Attention Mechanisms**: Add some focus for those long, winding musical tales.
-- **Conditional Generation**: Make it churn out "happy techno" or "stormy blues" on command.
-- **Transformer Integration**: Go full sci-fi with text-to-music transformers.
-- **Waveform Modeling**: Ditch spectrograms and go raw with waveforms for that gritty edge.
-
-## Citation
-
-If you use this to wow the world (or just your cat), give a shoutout:
-
-```
-@software{harmonic_vae,
-  author = {Your Name},
-  title = {Harmonic Autoencoder for Music},
-  year = {2025},
-  url = {https://github.com/yourusername/harmonic-vae}
-}
-```
+---
 
 ## License
 
-The Apache License 2.0 strikes the perfect balance for HarmonicVAE: good vibes should be shared.
+Licensed under Apache 2 because good music (and code) should be shared like mixtapes at a middle school.
+
+---
 
 ## Acknowledgements
 
-Big props to the wizards of neural audio, music info retrieval, and psychoacoustics research. Extra love to the open-source crew and the sacred bean juice (coffee) that fueled this madness.
+Shoutout to the coders, the AI whisperers, and the caffeine gods who kept this gig alive. Big love to the open-source posse for the tools, and to *you* for helping HarmonicVAE trade its robot clanks for human feels. Together, we’re tuning the future—one beat, one laugh, one “Wow, that slaps!” at a time.
+
+---
+
+we invite you to laugh, play, and connect with AI music like it’s your new bandmate. Ready to jam? Let’s make some noise! 🎸
