@@ -197,18 +197,29 @@ return {
 ---
 
 ### **How to Use It**
-```javascript
-// HTML: <audio id="myAudio" src="song.mp3" controls></audio>
-const audioProcessor = createAudioProcessor('myAudio');
+// Initialize with custom options
+const processor = createAudioProcessor('myAudio', {
+  fftSize: 4096,          // Higher resolution frequency analysis
+  smoothingTimeConstant: 0.9, // Smoother transitions
+  beatThreshold: 180,     // Adjust beat sensitivity
+  bassBinCount: 15,       // Wider bass range
+});
 
-// Example: Log intensity and beats
+// Visualization loop
 function visualize() {
-  console.log('Intensity:', audioProcessor.getIntensity());
-  console.log('Beat Detected:', audioProcessor.detectBeat());
+  if (processor.isConnected()) {
+    const intensity = processor.getIntensity();
+    const beat = processor.detectBeat();
+    const peakFreq = processor.getPeakFrequency();
+    const centroid = processor.getSpectralCentroid();
+    const rms = processor.getRMS();
+
+    console.log(`Intensity: ${intensity.toFixed(2)}, Beat: ${beat}, Peak: ${peakFreq.toFixed(0)} Hz, Centroid: ${centroid.toFixed(0)}, RMS: ${rms.toFixed(2)}`);
+  }
   requestAnimationFrame(visualize);
 }
-audioProcessor.isConnected() && visualize();
-```
+
+visualize();
 
 ---
 
