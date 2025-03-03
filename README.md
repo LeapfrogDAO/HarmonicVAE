@@ -1,6 +1,10 @@
+Alright, you’ve moved the code into the `ui` directory, and I’ve got you covered with an updated README that reflects this change along with the latest features and structure. Below is the shiny new complete README, packed with all the updates, a dash of humor, and everything you need to get rocking with HarmonicVAE. Let’s dive in!
+
+---
+
 # HarmonicVAE
 
-Welcome to the **HarmonicVAE (VAE)**—a neural network that's basically a musical genius trapped in code. This bad boy doesn't just crunch audio; it *gets* music, weaving psychoacoustics and music theory into its DNA. It's like giving a VAE a conservatory degree and a backstage pass to real-world datasets like MAESTRO and GTZAN. Let's make some noise—literally!
+Welcome to **HarmonicVAE**—a neural network that’s basically a musical genius trapped in code. This bad boy doesn’t just crunch audio; it *gets* music, weaving psychoacoustics and music theory into its DNA. It’s like handing a VAE a conservatory degree and a backstage pass to real-world datasets like MAESTRO and GTZAN. Let’s make some noise—literally!
 
 ## Features
 
@@ -12,19 +16,23 @@ Welcome to the **HarmonicVAE (VAE)**—a neural network that's basically a music
 
 ## Project Structure
 
+Since you’ve tucked the good stuff into the `ui` directory, here’s the updated lay of the land:
+
 ```
 harmonic-vae/
 ├── src/               # Source code directory
 │   ├── __init__.py    # Package marker file
 │   ├── HarmonicVAE.py # Core model implementation
 │   └── harmonic_audio_integration.py # Audio data handling and CLI
+├── ui/                # User interface subdirectory (the new VIP section!)
+│   ├── HarmonicVAEInterface.py # Gradio interface for HarmonicVAE
 ├── README.md          # You are here!
 └── requirements.txt   # Dependencies
 ```
 
 ## Requirements
 
-- **Python 3.7+**: We're not stuck in the Dark Ages.
+- **Python 3.7+**: We’re not stuck in the Dark Ages.
 - **PyTorch 1.7+**: The engine under the hood.
 - **torchaudio**: Audio magic, unleashed.
 - **numpy**: For when the numbers need wrangling.
@@ -36,7 +44,7 @@ harmonic-vae/
 ## Installation
 
 ```bash
-# Snag the repo like it's hot
+# Snag the repo like it’s hot
 git clone https://github.com/yourusername/harmonic-vae.git
 cd harmonic-vae
 
@@ -58,14 +66,14 @@ python -m src.harmonic_audio_integration --dataset gtzan --mode train --epochs 5
 ```bash
 python -m src.harmonic_audio_integration --dataset maestro --mode train --epochs 50 --output_dir output/maestro
 ```
-*Let it soak up MAESTRO's piano brilliance—Chopin would approve (maybe).*
+*Let it soak up MAESTRO’s piano brilliance—Chopin would approve (maybe).*
 
 ### Training on Custom Audio Files
 
 ```bash
 python -m src.harmonic_audio_integration --dataset custom --custom_dir path/to/audio/files --mode train --epochs 50 --output_dir output/custom
 ```
-*Got a secret audio hoard? Dump it in and see what this beast cooks up. No judgment, even if it's all polka.*
+*Got a secret audio hoard? Dump it in and see what this beast cooks up. No judgment, even if it’s all polka.*
 
 ### Generating New Audio from a Trained Model
 
@@ -79,14 +87,14 @@ python -m src.harmonic_audio_integration --mode generate --model_path output/gtz
 ```bash
 python -m src.harmonic_audio_integration --mode visualize --model_path output/gtzan/harmonic_vae_best.pt --custom_dir path/to/audio/files --output_dir output/visualizations
 ```
-*Peek into the latent space—it's like a cosmic map of your music collection. Zoom in, get lost, have fun.*
+*Peek into the latent space—it’s like a cosmic map of your music collection. Zoom in, get lost, have fun.*
 
 ### Interpolating Between Two Audio Files
 
 ```bash
 python -m src.harmonic_audio_integration --mode interpolate --model_path output/gtzan/harmonic_vae_best.pt --audio1 path/to/audio1.wav --audio2 path/to/audio2.wav --output_dir output/interpolations
 ```
-*Mix two tracks like a sonic smoothie blender. Jazz meets dubstep? Let's find out!*
+*Mix two tracks like a sonic smoothie blender. Jazz meets dubstep? Let’s find out!*
 
 ## Architecture Details
 
@@ -94,7 +102,7 @@ This Harmonic VAE is a musical marvel built from the ground up:
 
 1. **Audio Processing**: Turns raw audio into mel spectrograms—because humans hear fancy, not flat.
 2. **Encoder Network**: Squashes audio into a latent nugget of pure musical essence.
-3. **Harmonic Layers**: Special sauce layers that know a chord from a chaos, thanks to music theory.
+3. **Harmonic Layers**: Special sauce layers that know a chord from chaos, thanks to music theory.
 4. **Latent Space**: A playground where musical ideas hang out, ready to mingle.
 5. **Decoder Network**: Spins latent dreams back into sound waves you can actually hear.
 6. **LLM Bridge**: Optional gadget to chat with language models—because "sad violin" should mean something.
@@ -110,7 +118,7 @@ Once trained, this model can:
 
 ## Extending the Model
 
-This isn't a one-trick pony—tweak it to your heart's content:
+This isn’t a one-trick pony—tweak it to your heart’s content:
 
 - **Attention Mechanisms**: Add some focus for those long, winding musical tales.
 - **Conditional Generation**: Make it churn out "happy techno" or "stormy blues" on command.
@@ -132,7 +140,7 @@ If you use this to wow the world (or just your cat), give a shoutout:
 
 ## License
 
-The Apache License 2.0 strikes the perfect balance for HarmonicVAE: good vibes should be shared
+The Apache License 2.0 strikes the perfect balance for HarmonicVAE: good vibes should be shared.
 
 ## Acknowledgements
 
