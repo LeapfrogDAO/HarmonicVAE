@@ -1,6 +1,6 @@
 # HarmonicVAE Feedback System
 
-🎵 **Think you can out-emote an AI?** Step right up to the HarmonicVAE Feedback System—where *you* get to tell our musical robot overlord if its beats make you boogie, bawl, or just yawn. This isn’t just feedback; it’s a vibe check for AI-generated tunes, complete with pulsing visuals that groove harder than your uncle at a wedding reception. 🎶
+🎵 **AI wif emote** Step right up to the HarmonicVAE Feedback System—where *you* get to tell our musical robot overlord if its beats make you boogie, bawl, or just yawn. This isn’t just feedback; it’s a vibe check for AI-generated tunes, complete with pulsing visuals that groove harder than your uncle at a wedding reception. 🎶
 
 HarmonicVAE is an AI composer with big dreams (and maybe a few sour notes), and it needs *your* human soul to help it evolve. Rate its jams, spin the emotion wheel, and drop some truth bombs—it’s like music therapy, but for a machine. Let’s make AI music that doesn’t just play in elevators!
 
