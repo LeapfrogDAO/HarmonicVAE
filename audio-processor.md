@@ -197,13 +197,13 @@ return {
 ---
 
 ### **How to Use It**
-// Initialize with custom options
+```// Initialize with custom options
 const processor = createAudioProcessor('myAudio', {
   fftSize: 4096,          // Higher resolution frequency analysis
   smoothingTimeConstant: 0.9, // Smoother transitions
   beatThreshold: 180,     // Adjust beat sensitivity
   bassBinCount: 15,       // Wider bass range
-});
+});```
 
 // Visualization loop
 function visualize() {
