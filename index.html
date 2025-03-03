@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HarmonicVAE - Music Feedback System</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>HarmonicVAE</h1>
+    <p class="tagline">Creating music that resonates with human emotion</p>
+  </header>
+
+  <main>
+    <section class="player-section">
+      <h2>Listen & Feel</h2>
+      <div class="audio-player">
+        <audio id="audio-element" controls src="demo-audio/sample1.mp3"></audio>
+        <button id="generate-button" class="primary-button">Generate New Track</button>
+      </div>
+    </section>
+
+    <section class="feedback-section hidden" id="feedback-container">
+      <h2>How did this music make you feel?</h2>
+      
+      <div class="wheel-container">
+        <div id="emotion-wheel"></div>
+        <div id="emotion-wheel-selected" class="selection-display">Select an emotion</div>
+      </div>
+      
+      <div class="rating-container">
+        <h3>How would you rate this composition?</h3>
+        <div id="star-rating"></div>
+        <div id="rating-value">No rating yet</div>
+      </div>
+      
+      <div class="comment-container">
+        <h3>Tell us more</h3>
+        <textarea id="comment-field" rows="4" placeholder="How did this music resonate with you?"></textarea>
+      </div>
+      
+      <div class="consent-container">
+        <input type="checkbox" id="consent-checkbox">
+        <label for="consent-checkbox">I agree to share this feedback to help improve HarmonicVAE (no personal data stored)</label>
+      </div>
+      
+      <button id="submit-button" class="primary-button">Submit Feedback</button>
+    </section>
+    
+    <section class="results-section hidden" id="results-container">
+      <h2>Thank You!</h2>
+      <p>Your feedback helps HarmonicVAE create better music.</p>
+      <div class="next-actions">
+        <button id="generate-new-button" class="secondary-button">Generate Another Track</button>
+        <button id="view-insights-button" class="secondary-button">View Insights</button>
+      </div>
+    </section>
+  </main>
+  
+  <div id="notification" class="notification hidden"></div>
+
+  <footer>
+    <p>HarmonicVAE exists to empower anyone to create music that moves them, bridging technology and human expression.</p>
+  </footer>
+
+  <script src="emotion-wheel.js"></script>
+  <script src="star-rating.js"></script>
+  <script src="audio-processor.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
