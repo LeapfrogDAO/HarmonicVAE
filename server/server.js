@@ -32,8 +32,23 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
+// Log requests for debugging
+app.use((req, res, next) => {
+  logger.info(`Request for: ${req.url}`);
+  console.log('Request for:', req.url);
+  next();
+});
+
 // Middleware
-app.use(helmet()); // Security headers
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://d3js.org"],
+    },
+  },
+}));
+
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -57,7 +72,7 @@ const db = new sqlite3.Database('./harmonic_vae_feedback.db', (err) => {
   }
 });
 
-// Create database tables if they don’t exist
+// Create database tables if they don't exist
 function createTables() {
   db.run(`
     CREATE TABLE IF NOT EXISTS feedback (
@@ -230,6 +245,7 @@ app.get('/', (req, res) => {
 
 // Start server
 app.listen(port, () => {
+  console.log(`HarmonicVAE feedback server running on port ${port}`);
   logger.info(`HarmonicVAE feedback server running on port ${port}`);
 });
 
