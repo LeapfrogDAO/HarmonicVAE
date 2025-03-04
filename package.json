@@ -4,7 +4,7 @@
   "description": "A feedback system for HarmonicVAE, enabling user-driven improvements in AI-generated music through emotion tagging and quality ratings.",
   "main": "src/server/server.js",
   "scripts": {
-    "start": "node src/server/server.js",
+    "start": "node /server/server.js",
     "dev": "nodemon src/server/server.js",
     "lint": "eslint src",
     "test": "jest"
