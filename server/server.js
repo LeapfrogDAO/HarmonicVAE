@@ -36,7 +36,9 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(helmet()); // Security headers
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve static files from the 'public' directory at the root level
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Rate limiting to prevent abuse
 const limiter = rateLimit({
@@ -219,6 +221,11 @@ app.get('/api/stats', async (req, res) => {
     logger.error('Error getting statistics:', error);
     res.status(500).json({ success: false, message: 'Error getting statistics' });
   }
+});
+
+// Explicit route for the root URL to serve index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 // Start server
